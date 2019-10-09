@@ -1,0 +1,132 @@
+<html>
+<head>
+<style>
+.eclipse {
+	width: 20px height: 20px
+}
+
+.tab {
+	margin-left: 30px
+}
+
+.col-lg-12 div {
+	margin-bottom: 640px;
+	align: center
+}
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<title>CMPE160</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<center>
+				<h1>CMPE 160 Project #1 (Spring 2017)</h1>
+				<h3>
+					<b>Deadline:</b> April 14, 2017; 23:59
+				</h3>
+				</center>
+				<div id="page1">
+					<h2>1. Description</h2>
+
+					In this project, you are expected to develop a chess game along
+					with its Graphical User Interface (GUI). For the GUI as well as the
+					game itself, you are required to use the Object Oriented
+					Programming (OOP) principles you have learned so far. The GUI has
+					to be completed using <i>java.swing</i> library. You are given an
+					incomplete version of the project. Build and run the code you are
+					given. You should see a chessboard with eight black and eight white
+					pawns. Try to move the pawns by drag &amp; drop. Click on a pawn and
+					drag the mouse to the square in front. In this game the player will
+					be able to move and capture the opponent's pieces using such mouse
+					movements.
+					
+					<p><img src="images/chess.png" class="center">
+
+					<h2>2. Code</h2>
+					The source code that is provided to you consists of four classes.
+					The <b>ChessFrame</b> class is a JFrame subclass and draws the
+					chessboard to the frame using the logic shown in the following
+					image. Examine the <b>ChessFrame.java</b> code. It is
+					self-explanatory and has sufficient comments. 
+					
+					<p><img src="images/chess1.png" class="center">
+
+					<h2>3. Requirements</h2>
+
+					You are expected to:
+
+					<ol>
+						<li>Implement the other Pieces:
+
+							<p>
+								There is an abstract class, <b>Piece</b>, which should contain
+								all the common methods and variables of a chess piece. Its code
+								is commented so that you can understand the purpose and workflow
+								of each method. <b>Pawn</b> is a sample subclass of Piece.
+								<b>ChessFrame</b> creates 16 instances of <b>Pawn</b> and
+								puts them in their corresponding squares on the chessboard using
+								<b>initializeChessBoard()</b> method. You should create a
+								subclass of Piece for every other type of chess piece like
+								Knight, Bishop, etc. Then, update the
+								<b>initializeChessBoard()</b> method properly to put all the
+								pieces in place.
+							<p>
+								<u>Note:</u> The shapes of the pieces do not need to be fine
+								arts, but at least they should be recognizable. Take the
+								<b>drawYourself</b> code of <b>Pawn</b> and make some small
+								changes to it if you have to. Use basic drawings like: triangle,
+								rectangle, oval, etc.
+							<p>All the pieces should be able to move and capture properly
+								according to the rules of Chess.
+						</li>
+
+						<li>Implement the Turn-Based Logic:
+
+							<p>Currently the player (with the mouse) can move a white
+								piece as much as (s)he wants repeatedly. Besides, a white pawn
+								can capture a white pawn, and a black pawn can capture a black
+								pawn. This is wrong. You should fix this. The player should be
+								able to play one black one white piece in turn, and a piece
+								should only be able to capture the opponent's piece.
+							<p>
+								<u>Hint:</u> To do this, you might want to add some methods to
+								Piece.java, like getColor, etc. You might also want to add some
+								class variables into the ChessFrame.java to record and update
+								the turns. You must certainly modify the mouseReleased() method.
+								How to achieve the goal is up to you.
+						</li>
+
+						<li>Fix the Pawn Behavior:
+
+							<p>A pawn could move forward by two squares in its first
+								movement. Currently this is not possible. You should fix this.
+							<p>
+								<u>Hint:</u> You might want to add some class variables and
+								methods to Piece.java to achieve that.
+						<li>Some pieces can not jump over the others:
+
+							<p>In fact, only a Knight can jump over other pieces. A
+								rook cannot do that, for instance. You should also
+								take this into account.
+						</li>
+						<li>Give us an Advice:
+
+							<p>A chess game could be designed-implemented in many
+								ways/styles. According to your experience, write at least one
+								suggestion/advice/comment to indicate how could we design this
+								game code better (from OOP perspective). Write your suggestion
+								as a comment to the top of MainClass.java code.
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
